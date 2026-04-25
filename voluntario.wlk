@@ -2,23 +2,23 @@ import bebidas.*
 
 
 object tito {
-    var peso = 70
 
     var bebidaActual = cianuro
     var cantidadDosis = 0
+    method peso() = 70
+    method inerciaBase() = 490
+    
+   method rendimientoDeportista() = bebidaActual.rendimiento(cantidadDosis)
 
   method consumir(cantidad,bebida){
     bebidaActual = bebida
     cantidadDosis = cantidad
   }
 
-
 method velocidad() {
-
-     bebidaActual.rendimiento(cantidadDosis) * 490 / peso
-
+  self.rendimientoDeportista() * self.inerciaBase() / self.peso()
 }
 
-
-
+method bebidaActual() = bebidaActual
+method cantidadDosis() = cantidadDosis
 }

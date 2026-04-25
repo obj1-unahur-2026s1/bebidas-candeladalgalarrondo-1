@@ -2,8 +2,8 @@
 
 object whisky {
 
-     method rendimiento(cantidad) {
-         0.9 ** cantidad
+     method rendimiento(cantidadDosis) {
+         0.9 ** cantidadDosis
      }
      
 
@@ -11,13 +11,13 @@ object whisky {
 
 object terere {
   
-   method rendimiento(cantidad) {
-     (0.1 * cantidad).max(1) 
+   method rendimiento(cantidadDosis) {
+     (0.1 * cantidadDosis).max(1) 
    }
 }
 
 object cianuro {
-  method rendimiento(cantidad) {
+  method rendimiento(cantidadDosis) {
     0 
   }
 }
